@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+
+  font-size: 62.5%;
+}
+
+
+html,
+body,
+input,
+select,
+textarea {
+
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  height: 100vh;
+  
+  font-size: 1.6rem;
+  
+  background: var(--backgrond);
+  
+  
+}
+
+#app {
+  height: 100vh;
+width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  
+
+  background-image: url(./assets/blur-mobile.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+ 
+  
+  
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  padding: 3.5rem 2.5rem 2.5rem;
+
+  border-bottom: solid 1px var(--border);
+}
+
+.logo{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.menu{
+  margin-top: 2.5rem;
+
+  z-index: 1;
+  
+  background: var(--backgrond);
+
+  display: grid;
+  grid-template-rows: repeat(5 , 1fr);
+
+  color: var(--text-color);
+}
+
+nav ul li:hover{
+  border-left: solid 5px var(--button);
+}
+
+
+nav ul li a{
+
+  cursor: pointer;
+  color: var(--border-menu-mobile);
+  
+  height: 5.6rem;
+
+  border: solid 1px var(--border);
+
+  display: flex;
+  align-items: center;
+
+
+  font-size: 1.8rem;
+
+  padding-left: 3rem;
+
+}
+
+nav ul li a:hover{
+
+  font-weight: bold;
+
+
+  color: var(--text-color-menu-mobile);
+  border: solid 1px var(--border-menu-mobile);
+}
+
+.remove{
+  display: none;
+}
+
+main {
+  height: 100%;
+
+  max-width: 43.2rem;
+
+  margin-inline: auto;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 0 3.5rem;
+
+  
+}
+
+p {
+  margin-top: 8.9rem;
+  color: var(--text-color);
+}
+
+.button {
+  margin-top: 10rem;
+  width: 17.5rem;
+  height: 3.5rem;
+
+  border-radius: 0.6rem;
+
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  padding: 1rem 2.5rem;
+
+  background-color: transparent;
+  border: solid 1px var(--button);
+}
+
+h1, strong {
+  /* clamp(min, ideal, alto) */
+  font-size: clamp(1.5rem, 2vw + 3.5rem, 8rem);
+  line-height: clamp(1.5rem, 2vw + 7rem, 10rem);
+}
+
+p,
+li {
+  font-size: clamp(2.4rem, 1vw + 5.4rem, 3rem);
+  line-height: clamp(2.8rem, 1vw + 3rem, 5.5rem);
+}
+
+h1 {
+margin-top: 10rem;
+
+  
+  font-weight: bold;
+  color: var(--text-color);
+
+  line-height: 90%;
+}
+
+.stroke {
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  font-weight: bold;
+  width: 100%;
+}
+
+
+
+.image{
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  
+  object-fit: cover;
+}
+
+.bg-2, .bg-1{
+  display: none;
+}
+
+.desktop{
+  display: none;
+}
+
+.mobile{
+  display: inline;
+}
+
+
+@media (min-width: 768px) {
+
+  #app{
+    height: 100vh;
+  }
+  
+  main{
+    flex-direction: column;
+    max-width: fit-content;
+    
+    padding: 0 6rem;
+    
+    background-size: 75rem;
+    
+
+  }
+
+  .image{
+    max-width: 79.5rem;
+    margin-top: 5rem;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .desktop{
+    display: none;
+  }
+  
+  .mobile{
+    display: inline;
+  }
+
+}
+
+@media (min-width: 1120px) {
+
+  #app{
+    padding-top: 5rem;
+    background: none;
+
+  }
+
+  .bg-2, .bg-1{
+    display: inline;
+    opacity: 0.9;
+  }
+
+  .bg-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bg-2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+  
+.container{
+  max-width: 92.5rem;
+
+}
+
+header{
+  padding: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+
+
+}
+
+.logo{
+  width: auto;
+}
+
+.menu{
+  background: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  display: flex;
+  color: var(--text-color);
+  align-items: center;
+
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 3.3rem;
+
+}
+
+nav ul li a{
+  padding: 0 1rem;
+  border: none;
+  color: var(--text-color);
+  
+}
+
+.button{
+  margin: 0;
+}
+
+h1, strong{
+  font-size: 8.5rem;
+}
+
+  .mobile{
+    display: none;
+  }
+
+  .desktop{
+    display: inline;
+  }
+
+}
