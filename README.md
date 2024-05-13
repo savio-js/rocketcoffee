@@ -16,6 +16,7 @@ Esses projetos foram desenvolvido com as seguintes tecnologias:
 
 - HTML
 - CSS
+- JavaScript
 
 ## 🔖 Layout
 
